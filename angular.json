@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "newFrontEndADM": {
+    "AFrontEnd": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/new-front-end-adm",
+            "outputPath": "dist/afront-end",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,10 +24,10 @@
             ],
             "styles": [
               "src/styles.css",
-              "A:AFrontEnd/node_modules/bootstrapdistcss/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
-              "A:AFrontEnd/node_modules/bootstrapdistjs/bootstrap.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "newFrontEndADM:build:production"
+              "browserTarget": "AFrontEnd:build:production"
             },
             "development": {
-              "browserTarget": "newFrontEndADM:build:development"
+              "browserTarget": "AFrontEnd:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "newFrontEndADM:build"
+            "browserTarget": "AFrontEnd:build"
           }
         },
         "test": {
