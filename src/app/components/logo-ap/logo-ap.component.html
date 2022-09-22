@@ -3,19 +3,14 @@
     <div class="logo">
       <img src="../../../assets/APLogo.png" id="logoAP">
     </div>
-
     <div class="redes">
-      <div>
-        <a href=""> <img src="../../../assets/../assets/InLogo.png" id="InLogo"></a>
-        <a href=""> <img src="../../../assets/../assets/LiLogo.png" id="LiLogo"></a>
-        <a href=""> <img src="../../../assets/../assets/GmLogo.png" id="GmLogo"></a>
-        <a href=""> <img src="../../../assets/../assets/FaLogo.png" id="FaLogo"></a>
-        <a href=""> <img src="../../../assets/../assets/GhLogo.png" id="GhLogo"></a>
-        <button type="button" class="btn  btn-outline-light">INGRESO</button>
-      </div>
-
+      <a href="/login"><img src="../../../assets/linkedin.png" id="linkedin"></a>
+      <a href=""><img src="../../../assets/twitter.png" id="twitter"></a>
+      <a href=""><img src="../../../assets/instagram.png" id="instagram"></a>
+      <a href=""><img src="../../../assets/github.png" id="github"></a>
+      <a href=""><img src="../../../assets/facebook.png" id="facebook"></a>
+      <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+      <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
     </div>
-
   </div>
-
 </div>
