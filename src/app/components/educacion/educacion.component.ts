@@ -12,7 +12,7 @@ export class EducacionComponent implements OnInit {
   educacion: Educacion[] = [];
 
   constructor(
-    private educacion: EducacionService,
+    private educacionS: EducacionService,
     private tokenService: TokenService
   ) {}
   isLogged = false;
@@ -35,10 +35,10 @@ export class EducacionComponent implements OnInit {
   delete(id?: number) {
     if (id != undefined) {
       this.educacionS.delete(id).subscribe(
-        (_data: any) => {
+        (data) => {
           this.cargarEducacion();
         },
-        (_err: any) => {
+        (err) => {
           alert('No se pudo eliminar');
         }
       );
