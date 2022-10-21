@@ -55,7 +55,8 @@ import { EditSkillComponent } from './components/hys/edit-skill.component';
     BrowserAnimationsModule,
     FormsModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule,
+    HttpClientModule
+
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent],
