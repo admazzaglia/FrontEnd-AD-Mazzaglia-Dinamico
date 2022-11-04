@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoAPComponent } from './components/logo-ap/logo-ap.component';
