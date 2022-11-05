@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
         this.roles = data.authorities;
         this.router.navigate(['']);
       },
-      (err) => {
+      (err): void => {
         this.isLogged = false;
         this.isLogginFail = true;
         this.errMsj = err.error.mensaje;

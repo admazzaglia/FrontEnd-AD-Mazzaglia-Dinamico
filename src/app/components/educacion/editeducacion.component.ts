@@ -19,10 +19,10 @@ export class EditeducacionComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionS.detail(id).subscribe(
-      (data) => {
+      (data: Educacion) => {
         this.educacion = data;
       },
-      (_err) => {
+      (_err: any) => {
         alert('Error al modificar');
         this.router.navigate(['']);
       }
@@ -32,10 +32,10 @@ export class EditeducacionComponent implements OnInit {
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionS.update(id, this.educacion).subscribe(
-      (_data) => {
+      (_data: any) => {
         this.router.navigate(['']);
       },
-      (_err) => {
+      (_err: any) => {
         alert('Error al modificar la educacion');
         this.router.navigate(['']);
       }
