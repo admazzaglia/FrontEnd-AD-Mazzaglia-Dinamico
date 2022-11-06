@@ -25,23 +25,23 @@ export class EducacionComponent implements OnInit {
       this.isLogged = false;
     }
   }
-
-  cargarEducacion(): void {
-    this.educacionS.lista().subscribe((data) => {
-      this.educacion = data;
-    });
+  cargarEducacion(): void{
+    this.educacionS.lista().subscribe(
+      data =>{
+        this.educacion = data;
+      }
+    )
   }
 
-  delete(id?: number) {
-    if (id != undefined) {
+  delete(id?: number){
+    if( id != undefined){
       this.educacionS.delete(id).subscribe(
-        (data) => {
+        data => {
           this.cargarEducacion();
-        },
-        (err) => {
-          alert('No se pudo eliminar');
+        }, err => {
+          alert("No se pudo eliminar");
         }
-      );
+      )
     }
   }
 }
