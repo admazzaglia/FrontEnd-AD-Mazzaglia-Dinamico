@@ -8,12 +8,13 @@ import { Skill } from 'src/app/model/skill';
   providedIn: 'root',
 })
 export class SkillService {
-  URL = environment + 'skill/';
+  // URL = environment + 'skill/';
+  URL = 'http://localhost:8080/skill/';
 
   constructor(private httpClient: HttpClient) {}
 
   public lista(): Observable<Skill[]> {
-    return this.httpClient.get<Skill[]>(this.URL + 'lista');
+    return this.httpClient.get<Skill[]>(this.URL + `lista`);
   }
 
   public detail(id: number): Observable<Skill> {
@@ -21,7 +22,7 @@ export class SkillService {
   }
 
   public save(skill: Skill): Observable<any> {
-    return this.httpClient.post<any>(this.URL + 'create', skill);
+    return this.httpClient.post<any>(this.URL + `create`, skill);
   }
 
   public update(id: number, skill: Skill): Observable<any> {

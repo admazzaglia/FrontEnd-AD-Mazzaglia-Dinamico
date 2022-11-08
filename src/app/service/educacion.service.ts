@@ -12,10 +12,11 @@ export class EducacionService {
   //URL = environment.URL + 'educacion/';
     URL = 'http://localhost:8080/educacion/';
 
+
   constructor(private httpClient : HttpClient) { }
 
   public lista(): Observable<Educacion[]>{
-    return this.httpClient.get<Educacion[]>(this.URL + `ista`);
+    return this.httpClient.get<Educacion[]>(this.URL + `lista`);
   }
 
   public detail(id: number): Observable<Educacion>{
