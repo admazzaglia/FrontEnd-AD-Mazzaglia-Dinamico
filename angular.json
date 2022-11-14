@@ -93,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "../node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -101,7 +102,12 @@
       }
     }
   },
-  "cli": {
-    "analytics": "0d5b6edd-8fb0-41cc-93d5-5068d817bc5c"
+
+  // "cli": {
+    "analytics": "0d5b6edd-8fb0-41cc-93d5-5068d817bc5c",
+    "cli": {
+      "analytics": "2ed302ea-b9de-4acb-9395-9e3fb0a1d359"
+    }
   }
+  "defaultProject": "AFrontEnd"
 }

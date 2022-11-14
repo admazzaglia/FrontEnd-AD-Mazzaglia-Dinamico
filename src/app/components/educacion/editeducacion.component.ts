@@ -32,10 +32,10 @@ export class EditeducacionComponent implements OnInit {
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionS.update(id, this.educacion).subscribe(
-      (_data: any) => {
+      (data: any) => {
         this.router.navigate(['']);
       },
-      (_err: any) => {
+      (err: any) => {
         alert('Error al modificar la educacion');
         this.router.navigate(['']);
       }
