@@ -25,6 +25,7 @@ export class LogoAPComponent implements OnInit {
     window.location.reload();
   }
 
+    //función de logueo para el boton Login
   login() {
     this.router.navigate(['/login']);
   }
