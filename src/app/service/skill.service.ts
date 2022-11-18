@@ -9,7 +9,6 @@ import { Skill } from 'src/app/model/skill';
 })
 export class SkillService {
   //URL = environment + 'skill/';
-
   URL = 'http://localhost:8080/skill/';
 
   constructor(private httpClient: HttpClient) {}

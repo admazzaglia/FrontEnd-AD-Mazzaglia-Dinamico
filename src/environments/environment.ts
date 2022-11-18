@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
+  //URL: 'http://localhost:4200/'
+  // URL:'http://heroku.backendmad.heroku.app.com/´
   URL: 'http://localhost:4200/'
+
 };
 
 /*
