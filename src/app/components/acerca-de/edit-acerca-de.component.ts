@@ -25,12 +25,11 @@ export class EditAcercaDeComponent implements OnInit {
     this.personaService.detail(id).subscribe(
       data => {
         this.persona = data;
-      },
-      (err) => {
+      }, (err) => {
         alert('Error al modificar');
         this.router.navigate(['']);
       }
-    );
+    )
   }
 
   onUpdate(): void {
@@ -38,11 +37,11 @@ export class EditAcercaDeComponent implements OnInit {
     this.persona.img = this.imageService.url
     this.personaService.update(id, this.persona).subscribe(
       data => {this.router.navigate(['']);
-      },
-      err => {alert('Error al modificar Persona');
+      }, err => {
+        alert('Error al modificar Persona');
         this.router.navigate(['']);
       }
-    );
+    )
   }
 
   uploadImage($event:any){
