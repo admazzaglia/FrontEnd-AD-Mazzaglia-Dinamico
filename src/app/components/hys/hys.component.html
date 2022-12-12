@@ -16,10 +16,10 @@
     *ngFor="let skill of skill"
   >
     <circle-progress
-      [percent]="skill.porcentaje"
+      [percent]="(skill.porcentaje)"
       [radius]="90"
       [imageSrc]="''"
-      [title]="skill.nombre"
+      [title]="(skill.nombre)"
       [titleColor]="'#212F3C'"
       [showTitle]="true"
       [showImage]="false"
@@ -36,17 +36,17 @@
     >
     </circle-progress>
 
+
+    // BOTONES
     <div>
       <td *ngIf="isLogged">
         <button class="btn btn-light" routerLink="/editskill/{{ skill.id }}">
           <i class="bi bi-pencil-fill"></i>
-          Editar
         </button>
       </td>
       <td *ngIf="isLogged">
         <button class="btn btn-danger" (click)="delete(skill.id)">
           <i class="bi bi-trash-fill"></i>
-          Borrar
         </button>
       </td>
     </div>
