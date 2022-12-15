@@ -36,7 +36,8 @@ export class EditAcercaDeComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.persona.img = this.imageService.url
     this.personaService.update(id, this.persona).subscribe(
-      data => {this.router.navigate(['']);
+      data => {
+        this.router.navigate(['']);
       }, err => {
         alert('Error al modificar Persona');
         this.router.navigate(['']);

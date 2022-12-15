@@ -10,9 +10,10 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  //´http://backendmad.herokuapp.com/auth/';
-  //URL = environment.URL + 'auth/';
+  //´http://madportfolio.app.com/auth/';
   authURL = 'http://localhost:8080/auth/';
+  //authURL = environment.URL + 'auth/';
+
 
 
   constructor(private httpClient: HttpClient) { }
