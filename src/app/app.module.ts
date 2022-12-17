@@ -62,7 +62,7 @@ import { environment } from '../environments/environment';
     FormsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    //provideFirebaseApp(() => initializeApp(environment.firebase)),
 
   ],
 

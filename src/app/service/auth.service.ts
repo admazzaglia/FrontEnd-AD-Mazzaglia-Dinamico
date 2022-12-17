@@ -11,9 +11,8 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 export class AuthService {
   //´http://madportfolio.app.com/auth/';
-  authURL = 'http://localhost:8080/auth/';
   //authURL = environment.URL + 'auth/';
-
+  authURL = 'http://localhost:8080/auth/';
 
 
   constructor(private httpClient: HttpClient) { }
