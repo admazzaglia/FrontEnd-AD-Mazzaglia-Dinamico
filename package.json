@@ -2,7 +2,7 @@
   "name": "afront-end",
   "version": "0.0.0",
   "scripts": {
-
+    "dev": "webpack-dev-server --hot --inline"
   },
   "private": true,
   "dependencies": {
