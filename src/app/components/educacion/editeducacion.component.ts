@@ -26,7 +26,7 @@ export class EditeducacionComponent implements OnInit {
         alert('Error al modificar');
         this.router.navigate(['']);
       }
-    );
+    )
   }
 
   onUpdate(): void {
@@ -36,7 +36,7 @@ export class EditeducacionComponent implements OnInit {
         this.router.navigate(['']);
       },
       err => {
-        alert('Error al modificar la educacion');
+        alert('Error al modificar la Educacion');
         this.router.navigate(['']);
       }
     );

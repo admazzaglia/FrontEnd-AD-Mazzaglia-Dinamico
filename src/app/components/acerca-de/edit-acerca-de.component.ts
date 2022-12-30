@@ -1,8 +1,8 @@
 import { Component, OnInit, } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { persona } from 'src/app/model/persona.model';
+import { Persona } from 'src/app/model/Persona.model';
 import { ImageService } from 'src/app/service/image.service';
-import { PersonaService} from 'src/app/service/persona.service';
+import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-edit-acerca-de',
@@ -11,8 +11,8 @@ import { PersonaService} from 'src/app/service/persona.service';
 })
 
 export class EditAcercaDeComponent implements OnInit {
+  persona: Persona = null;
 
-  persona: persona = null;
 
   constructor(
     private activatedRouter: ActivatedRoute,
