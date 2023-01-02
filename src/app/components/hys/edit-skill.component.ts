@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Skill } from 'src/app/model/skill';
+import { skill } from 'src/app/model/skill';
 import { SkillService } from 'src/app/service/skill.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { SkillService } from 'src/app/service/skill.service';
   styleUrls: ['./edit-skill.component.css']
 })
 export class EditSkillComponent implements OnInit {
-  skill: Skill = null;
+  skill: skill = null;
 
   constructor(
     private skillS: SkillService,
@@ -22,7 +22,7 @@ export class EditSkillComponent implements OnInit {
       data => {
         this.skill = data;
       }, err => {
-        alert("Error al modificar");
+        alert("Error al modificar Skill");
         this.router.navigate(['']);
       }
     )
@@ -34,9 +34,9 @@ export class EditSkillComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la skill");
+        alert("Error al modificar la Skill");
         this.router.navigate(['']);
       }
-    )
+    );
   }
 }

@@ -38,7 +38,7 @@ export class ProyectoComponent implements OnInit {
           this.cargarProyecto();
         },
         (err) => {
-          alert('No se pudo eliminar');
+          alert('No se pudo eliminar proyecto');
         }
       );
     }

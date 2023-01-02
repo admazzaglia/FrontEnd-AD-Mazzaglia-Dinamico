@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 
-
 @Component({
   selector: 'app-new-proyecto',
   templateUrl: './new-proyecto.component.html',
@@ -14,9 +13,9 @@ export class NewProyectoComponent implements OnInit {
   descripcion: string;
 
   constructor(
-   private proyectoS: ProyectoService,
-   private router: Router) {}
-
+    private proyectoS: ProyectoService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {}
 
@@ -33,5 +32,4 @@ export class NewProyectoComponent implements OnInit {
       }
     );
   }
-
 }

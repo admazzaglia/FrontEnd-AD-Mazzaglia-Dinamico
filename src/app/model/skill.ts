@@ -1,4 +1,4 @@
-export class Skill {
+export class skill {
   id: number;
   nombre: string;
   porcentaje: number;
