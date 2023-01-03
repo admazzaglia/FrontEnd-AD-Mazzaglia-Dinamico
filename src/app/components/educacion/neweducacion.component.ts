@@ -11,13 +11,22 @@ import { EducacionService } from 'src/app/service/educacion.service';
 export class NeweducacionComponent implements OnInit {
   nombreE: string;
   descripcionE: string;
+  desdeE: number;
+  hastaE: number;
 
-  constructor(private educacionS: EducacionService, private router: Router) {}
+  constructor(
+    private educacionS: EducacionService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {}
 
   onCreate(): void {
-    const educacion = new Educacion(this.nombreE, this.descripcionE);
+    const educacion = new Educacion(
+      this.nombreE,
+      this.descripcionE,
+      this.desdeE, this.hastaE
+    );
     this.educacionS.save(educacion).subscribe(
       (data) => {
         alert('Educacion Añadida');

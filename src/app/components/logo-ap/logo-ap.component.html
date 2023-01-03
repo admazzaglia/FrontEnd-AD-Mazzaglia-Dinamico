@@ -1,17 +1,66 @@
 <div class="row">
   <div class="container">
     <div class="logo">
-      <img src="../../../assets/APLogo.png" id="logoAP" />
+      <a
+        href="https://argentinaprograma.inti.gob.ar/"
+        target="_blank"
+        rel="noreferrer noopener"
+        ><img src="../../../assets/ARGEPROGR.jpg" alt="logoAP"
+      /></a>
     </div>
-    <div class="redes">
-      <a href=""><img src="../../../assets/faceboock.png" id="facebook" /></a>
-      <a href=""><img src="../../../assets/linkedin.png" id="linkedin" /></a>
-      <a href=""><img src="../../../assets/twitter.png" id="twitter" /></a>
-      <a href=""><img src="../../../assets/instagram.png" id="instagram" /></a>
-      <a href=""><img src="../../../assets/github.png" id="github" /></a>
 
-      <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Ingreso</button>
-      <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar</button>
+    <div class="redes">
+      <a
+        href="https://www.facebook.com/admazzaglia/"
+        target="_blank"
+        rel="noreferrer noopener"
+        ><img src="../../../assets/faceboock.png" alt="facebook"
+      /></a>
+
+      <a
+        href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+        target="_blank"
+        rel="noreferrer noopener"
+        ><img src="../../../assets/linkedin.png" alt="linkedin"
+      /></a>
+
+      <a
+        href="https://twitter.com/admazzaglia/"
+        target="_blank"
+        rel="noreferrer noopener"
+        ><img src="../../../assets/twitter.png" alt="twitter"
+      /></a>
+
+      <a
+        href="https://www.instagram.com/stories/highlights/17916329294100758/"
+        target="_blank"
+        rel="noreferrer noopener"
+        ><img src="../../../assets/instagram.png" alt="instagram"
+      /></a>
+
+      <a
+        href="https://github.com/admazzaglia?tab=repositories"
+        target="_blank"
+        rel="noreferrer noopener"
+        ><img src="../../../assets/github.png" alt="github"
+      /></a>
+
+      <button
+        type="button"
+        class="btn btn-outline-light"
+        (click)="login()"
+        *ngIf="!isLogged"
+      >
+        Ingreso
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-light"
+        (click)="onLogOut()"
+        *ngIf="isLogged"
+      >
+        Cerrar
+      </button>
     </div>
   </div>
 </div>
