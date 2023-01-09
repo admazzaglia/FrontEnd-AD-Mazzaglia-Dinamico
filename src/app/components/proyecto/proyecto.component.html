@@ -1,1 +1,43 @@
-<p>proyecto works!</p>
+<div class="row">
+  <h1>Proyectos</h1>
+  <div class="col-lg-2">
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/nuevoproyecto"
+      *ngIf="isLogged"
+    >
+      Ingresar
+    </button>
+  </div>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Proyecto of proyecto">
+          <td>
+            <h5>{{ Proyecto.nombre }}</h5>
+          </td>
+          <td>{{ Proyecto.descripcion }}</td>
+          <td *ngIf="isLogged">
+            <button
+              class="btn btn-light"
+              routerLink="/editproyecto/{{ Proyecto.id }}"
+            >
+              <i class="bi bi-pencil-fill"></i>
+              Editar
+            </button>
+          </td>
+
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="delete(Proyecto.id)">
+              <i class="bi bi-trash-fill"></i>
+              Borrar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

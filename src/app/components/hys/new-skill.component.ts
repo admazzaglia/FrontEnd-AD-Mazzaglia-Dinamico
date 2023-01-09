@@ -16,7 +16,6 @@ export class NewSkillComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  //CREAMOS UN SKILL
   onCreate(): void {
     const skill = new Skill(this.nombre, this.porcentaje);
     this.skillS.save(skill).subscribe(

@@ -34,7 +34,8 @@ export class HysComponent implements OnInit {
 
   delete(id: number) {
     if (id != undefined) {
-      this.skillS.delete(id).subscribe((data) => {
+      this.skillS.delete(id).subscribe(
+        (data) => {
           this.cargarSkills();
         },
         (err) => {

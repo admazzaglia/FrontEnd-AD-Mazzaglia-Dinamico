@@ -5,8 +5,9 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 @Component({
   selector: 'app-edit-experiencia',
   templateUrl: './edit-experiencia.component.html',
-  styleUrls: ['./edit-experiencia.component.css']
+  styleUrls: ['./edit-experiencia.component.css'],
 })
+
 export class EditExperienciaComponent implements OnInit {
   explab: Experiencia = null;
 
@@ -19,10 +20,11 @@ export class EditExperienciaComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.detail(id).subscribe(
-      (data) =>{
+      data =>{
         this.explab = data;
-      }, (err) =>{
-        alert("1 Error al modificar experiencia");
+      },
+      err =>{
+        alert('Error al modificar');
         this.router.navigate(['']);
       }
     )
@@ -31,13 +33,13 @@ export class EditExperienciaComponent implements OnInit {
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.explab).subscribe(
-      (data) => {
+      data => {
         this.router.navigate(['']);
-      }, (err) =>{
-         alert("2 Error al modificar experiencia");
-         this.router.navigate(['']);
+      },
+      err =>{
+        alert('Error al modificar');
+        this.router.navigate(['']);
       }
-    )
+    );
   }
-
 }

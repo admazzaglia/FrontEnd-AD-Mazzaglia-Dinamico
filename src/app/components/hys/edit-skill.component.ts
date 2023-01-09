@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill';
 import { SkillService } from 'src/app/service/skill.service';
+
 @Component({
   selector: 'app-edit-skill',
   templateUrl: './edit-skill.component.html',
@@ -23,7 +24,7 @@ export class EditSkillComponent implements OnInit {
         this.skill = data;
       },
       (err) => {
-        alert('Error al modificar el Skill');
+        alert('Error al modificar');
         this.router.navigate(['']);
       }
     );
